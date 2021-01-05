@@ -14,10 +14,10 @@ const Home = () => {
         <LayoutServibev>
             <Header/>
             <Data/>
-            <Clients/>
             <PostMix/>
             <Servicios/>
             <Calidad/>
+            <Clients/>
             <Testimonials/>
         </LayoutServibev>
     )

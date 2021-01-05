@@ -10,13 +10,18 @@ const LayoutServibev = ({ children }) => {
         color:'gray',
         padding:'20px',
     }
-
+    const logo = {
+        textDecoration:'none',
+        color:'gray',
+        padding:'20px',
+    }
     return (
     <Layout >
-        <Header className="header"  >
-        <div className="logo" />
-        {/* <img alt="logo-servibev" src='../../servibev.png' style={{width:'100px', height:'100px', position:'relative'}}/> */}
-            <Menu  theme="dark" mode="horizontal"  style={{display:'flex', flexDirection:'row', justifyContent:'flex-end', marginRight:'30px'}}>
+        <Header className="header" style={{  top:'0', display:'flex', flexDirection:'row', justifyContent:'space-between'}} >
+                <div>
+                    <img alt="logo-servibev" src='../../servibev.png' style={{width:'70px', height:'60px'}}/>
+                </div>
+            <Menu  theme="dark" mode="horizontal"  style={{ top:'0', display:'flex', flexDirection:'row', justifyContent:'flex-end',}}>
                 <Menu.Item key="1" style={{listStyleType: 'none'}}>
                     <Link to="/" style={nav}>
                         Home
@@ -37,15 +42,18 @@ const LayoutServibev = ({ children }) => {
                         Blog
                     </Link>
                 </Menu.Item>
+                <Menu.Item key="4"  style={{listStyleType: 'none'}}>
+                    <Link to="/contacto" style={nav}>
+                        Contacto
+                    </Link>
+                </Menu.Item>
             </Menu>
         </Header>
 
       <Content>
         <div >{children}</div>
       </Content>
-      <Footer style={{height:'200px', backgroundColor:'#1F2933'}}>
-
-      </Footer>
+      
     </Layout>
     )
 }
