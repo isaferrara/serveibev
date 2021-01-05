@@ -2,7 +2,7 @@ import React from 'react'
 import { Button , Card} from 'antd'
 import {
     AlertOutlined
-  } from '@ant-design/icons';
+} from '@ant-design/icons';
 
 export const Servicios = () => {
     const cardsService={

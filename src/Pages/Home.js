@@ -7,6 +7,7 @@ import Header from '../Components/home/Header.js'
 import PostMix from '../Components/home/PostMix.js'
 import Servicios from '../Components/home/Servicios.js'
 import Testimonials from '../Components/home/Testimonials.js'
+import Footer from '../Components/Footer.js'
 
 
 const Home = () => {
@@ -17,8 +18,9 @@ const Home = () => {
             <PostMix/>
             <Servicios/>
             <Calidad/>
-            <Clients/>
             <Testimonials/>
+            <Clients/>
+            <Footer/>
         </LayoutServibev>
     )
 }
