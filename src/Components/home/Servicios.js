@@ -19,12 +19,12 @@ export const Servicios = () => {
     }
     
     return (
-        <div style={{padding:'27% 7% 20% 15% ',  width:'100%', display:'flex',  textAlign:'center', flexDirection:'row', justifyContent:'space-between', backgroundColor:'#FAFAFA'}}>
+        <div style={{padding:'5% 7% 20% 15% ',  width:'100%', display:'flex',  textAlign:'center', flexDirection:'row', justifyContent:'space-between', backgroundColor:'#FAFAFA'}}>
             <div >
          
                 <h2 style={{ textAlign:'center', fontSize:'40px', marginTop:'40%'}}>Nuestros servicios</h2>
                 <p></p>
-                >
+             
                 <Button> Más información</Button>
             </div>
 
