@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header = () => {
+export const BlogHeader = () => {
     const header={
         width:'100%',
         height:'40vh',
@@ -9,11 +9,8 @@ const Header = () => {
         alignItems:'center',
         justifyContent:'center'
       }
-
     return (
         <div style={header}>            
-            
         </div>
     )
 }
-export default Header

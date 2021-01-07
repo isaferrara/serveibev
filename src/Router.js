@@ -15,25 +15,23 @@ import PostMix from './Pages/Blog/PostMix'
 import Blog from './Pages/Blog/Blog'
 
 
-
 const Router = () => {
     return (
     <BrowserRouter >
-    <Switch>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/nosotros" component={Nosotros} />
-    <Route exact path="/productos" component={ProdServ} />
-    <Route exact path="/contacto" component={Contacto} />
-    <Route component={NotFound} />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/nosotros" component={Nosotros} />
+        <Route exact path="/productos" component={ProdServ} />
+        <Route exact path="/contacto" component={Contacto} />
+ 
+        {/* blog */}
+        <Route exact path="/blog" component={Blog} />
+        <Route exact path="/blog/practicas" component={Practicas} />
+        <Route exact path="/blog/post-mix" component={PostMix} />
+        <Route exact path="/blog/calidad" component={Calidad} />
+        <Route component={NotFound} />
 
-    
-    {/* blog */}
-    <Route exact path="/blog" component={Blog} />
-    <Route exact path="/blog/practicas" component={Practicas} />
-    <Route exact path="/blog/post-mix" component={PostMix} />
-    <Route exact path="/blog/calidad" component={Calidad} />
-
-    </Switch>
+      </Switch>
     </BrowserRouter>
     )
 }

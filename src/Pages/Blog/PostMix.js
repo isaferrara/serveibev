@@ -1,9 +1,18 @@
 import React from 'react'
+import Footer from '../../Components/Footer.js'
+import LayoutServibev from '../../Components/LayoutServibev'
+import { BlogHeader } from '../../Components/BlogHeader.js'
 
 const PostMix = () => {
     return (
         <div>
-        
+            <LayoutServibev>
+            <BlogHeader/>
+            <div>
+                
+            </div>
+            </LayoutServibev>
+            <Footer/>
         </div>
     )
 }

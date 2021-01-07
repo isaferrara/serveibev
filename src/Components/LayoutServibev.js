@@ -38,11 +38,11 @@ const LayoutServibev = ({ children }) => {
                     </Link>
                 </Menu.Item>
                 <Menu.Item key="4"  style={{listStyleType: 'none'}}>
-                    <Link to="/blog" style={nav}>
+                <Link to="/blog" style={nav}>
                         Blog
                     </Link>
                 </Menu.Item>
-                <Menu.Item key="4"  style={{listStyleType: 'none'}}>
+                <Menu.Item key="5"  style={{listStyleType: 'none'}}>
                     <Link to="/contacto" style={nav}>
                         Contacto
                     </Link>
