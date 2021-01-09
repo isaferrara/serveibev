@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom'
 
 const Servicios = () => {
     return (
-        <div style={{display:'flex', justifyContent:'space-around', margin:'auto', flexWrap:'wrap', backgroundColor:'white', width:'800px'}}>
+        <div style={{width:'100%', backgroundColor:'white', textAlign:'center', padding:'50px'}}>
+        <h2>Servicios</h2>
+        <p>dfadf</p>
+        <div style={{display:'flex', justifyContent:'space-around', margin:'auto', flexWrap:'nowrap',  width:'900px', paddingTop:'20px'}}>
         <div class="blog-card spring-fever" >
         <div class="title-content">
             <h3>Buenas prácticas</h3>
@@ -38,7 +41,7 @@ const Servicios = () => {
         <div class="color-overlay"></div>
         </div>        
         </div>
-
+        </div>
     )
 }
 export default Servicios

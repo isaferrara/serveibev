@@ -30,8 +30,8 @@ const Footer = () => {
         </div>
         <Divider style={{ margin:'0px',color:'white'}} ></Divider>
             <div style={{display:'flex', justifyContent:'space-between', backgroundColor:'#1F2933', padding:'10px'}}>
-                <h3 style={{color:'white', marginLeft:'150px'}}> Servibev 2020</h3>
-                <h3 style={{color:'white', marginRight:'150px'}}> Created by Isabel Ferrara</h3>
+                <small style={{color:'white', marginLeft:'150px'}}> Servibev 2020</small>
+                <small style={{color:'white', marginRight:'150px'}}> Created by Isabel Ferrara</small>
             </div>
         </footer>
     )

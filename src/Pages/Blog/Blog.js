@@ -22,7 +22,6 @@ const Blog = () => {
         <div class="utility-info">
             <ul class="utility-list">
             <li><span class="licon icon-dat"></span>03 jun 2017</li>
-            <li><span class="licon icon-tag"></span><p>Photos</p>, <p>Nice</p></li>
             </ul>
         </div>4
         <div class="gradient-overlay"></div>
@@ -39,7 +38,6 @@ const Blog = () => {
         <div class="utility-info">
             <ul class="utility-list">
             <li><span class="licon icon-dat"></span>03 jun 2017</li>
-            <li><span class="licon icon-tag"></span><p>Photos</p>, <p>Nice</p></li>
             </ul>
         </div>4
         <div class="gradient-overlay"></div>
@@ -56,7 +54,6 @@ const Blog = () => {
         <div class="utility-info">
             <ul class="utility-list">
             <li><span class="licon icon-dat"></span>03 jun 2017</li>
-            <li><span class="licon icon-tag"></span><p>Photos</p>, <p>Nice</p></li>
             </ul>
         </div>4
         <div class="gradient-overlay"></div>

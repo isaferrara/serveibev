@@ -1,28 +1,63 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom'
 const { Header, Content, Footer } = Layout;
 
 const LayoutServibev = ({ children }) => {
 
+    const [navbar, setNav]= useState(false)
+
     const nav = {
         textDecoration:'none',
-        color:'gray',
-        padding:'20px',
+        color:'black',
+        fontSize:'18px',
+        border:'none',
+        fontWeight:'100'
     }
-    const logo = {
-        textDecoration:'none',
-        color:'gray',
-        padding:'20px',
+    const navy = {
+        width: '100%',
+        background: 'transparent',
+        position: 'fixed',
+        top: '0' ,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        zIndex: '1',
+        marginRight:'60px'
+      }
+      const navyScroll = {
+        width: '100%',
+        background: 'white',
+        position: 'fixed',
+        top: '0' ,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        zIndex: '1',
+        marginRight:'60px',
+        transition: '2s',
+      }
+
+
+
+    const changeBack =()=>{
+        if(window.scrollY>=20){
+            setNav(true)
+        }else{
+            setNav(false)
+
+        }
     }
+    window.addEventListener('scroll', changeBack)
+
     return (
     <Layout >
-        <Header className="header" style={{  top:'0', display:'flex', flexDirection:'row', justifyContent:'space-between'}} >
+        <div style={!navbar? navy: navyScroll } >
                 <div>
-                    <img alt="logo-servibev" src='../../servibev.png' style={{width:'70px', height:'60px'}}/>
+                    <img alt="logo-servibev" src='../../servibev.png' style={{width:'70px', height:'60px', marginLeft:'20px'}}/>
                 </div>
-            <Menu  theme="dark" mode="horizontal"  style={{ top:'0', display:'flex', flexDirection:'row', justifyContent:'flex-end',}}>
-                <Menu.Item key="1" style={{listStyleType: 'none'}}>
+            <Menu  mode="horizontal"  style={{background:'transparent', border:'none'}}>
+                <Menu.Item key="1" style={{listStyleType: 'none'}} >
                     <Link to="/" style={nav}>
                         Home
                     </Link>
@@ -48,7 +83,7 @@ const LayoutServibev = ({ children }) => {
                     </Link>
                 </Menu.Item>
             </Menu>
-        </Header>
+        </div>
 
       <Content>
         <div >{children}</div>

@@ -13,7 +13,7 @@ const Postmix = () => {
                         <p> El sistema Post Mix es utilizado en todo el mundo para facilitar el dispensado de bebidas en restaurantes, bares y comedores industriales. Su facilidad de uso y bajo costo de mantenimiento permite generar rentabilidad para los negocios del ramo de alimentos y bebidas.
 Este sistema es adecuado para los negocios que sirven a grandes cantidades de refrescos y bebidas que requieren de rapidez.</p>
                     </div>
-                    <img src='../../postmix.png' style={{width:'450px', position:'relative', bottom:'250px', left:'20px', borderRadius:'10px', boxShadow:'1px 21px 42px 2px rgba(0,0,0,0.14)',}}/>
+                    <img src='../../postmix.png' style={{width:'450px', position:'relative', bottom:'250px', right:'20px', borderRadius:'10px', boxShadow:'1px 21px 42px 2px rgba(0,0,0,0.14)',}}/>
                 </div>
             </div>
             </div>   
