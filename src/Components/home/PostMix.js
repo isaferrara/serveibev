@@ -11,7 +11,7 @@ export const PostMix = () => {
                     <div style={{  position:'relative',padding:'3vh ', width:'45%', height:'300px', display:'flex', flexDirection:'column', textAlign:'center', left:'53%', top:'20px'}}>
                     <h2 style={{ fontSize:'25px', fontWeight:'700', color:'black'}}>Post-mix</h2>
                         <p> Gracias a su facilidad de uso y bajo costo de mantenimiento, el sistema Post Mix es utilizado en todo el mundo para facilitar el dispensado de bebidas en restaurantes, bares y comedores industriales.</p>
-                        <Link className='btnGen'>Conoce más</Link>
+                        <Link className='btnGen'>Más información</Link>
                     </div>
                     <img src='../../postmix.png' style={{width:'450px', position:'absolute', bottom:'40px', right:'350px', borderRadius:'10px', boxShadow:'1px 21px 42px 2px rgba(0,0,0,0.14)',}}/>
                 </div>

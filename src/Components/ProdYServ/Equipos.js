@@ -14,7 +14,7 @@ const contentStyle = {
     return (
         <Carousel autoplay dotPosition='top' style={{width:'600px'}}>
         <div>
-          <h3 style={{...contentStyle, backgroundImage:'url(https://theholistichealthacademy.com/wp-content/uploads/2019/07/shutterstock_1337089139.jpg)'}}>1</h3>
+          <div style={{...contentStyle, backgroundImage:'url(../../6valv.png)', backgroundSize:'cover', backgroundRepeat:'no-repeat',backgroundColor:'white',  backgroundPosition: 'center'}}></div>
         </div>
         <div>
         <h3 style={{...contentStyle, backgroundImage:'url(https://theholistichealthacademy.com/wp-content/uploads/2019/07/shutterstock_1337089139.jpg)'}}>1</h3>

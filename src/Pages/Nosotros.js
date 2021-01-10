@@ -12,6 +12,7 @@ import Footer from '../Components/Footer.js'
  const Nosotros = () => {
     return (
         <LayoutServibev>
+            <div style={{backgroundColor:'white'}}>
             <Header/>
             <Valores/>
             <Historia/>
@@ -19,6 +20,7 @@ import Footer from '../Components/Footer.js'
             <Equipo/>
             <Instalaciones/>
             <Footer/>
+            </div>
         </LayoutServibev>
     )
 }

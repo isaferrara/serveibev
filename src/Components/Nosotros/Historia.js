@@ -11,7 +11,7 @@ export const Historia = () => {
           <div className="tl-bg" style= {{backgroundImage: 'url(https://placeimg.com/801/801/nature)'}} ></div>
           
           <div className="tl-year">
-            <p className="f2 heading--sanSerif">2011</p>
+            <p >2011</p>
           </div>
       
           <div className="tl-content">

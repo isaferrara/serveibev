@@ -17,18 +17,23 @@ import {
 
       const header={
         width:'100%',
-        height:'40vh',
-        backgroundImage:'url(https://theholistichealthacademy.com/wp-content/uploads/2019/07/shutterstock_1337089139.jpg)',
+        height:'50vh',
+        backgroundImage:'url(../../b3.jpg)',
+        backgroundPosition: '0% 0%',
+        backgroundSize: 'cover',
         display:'flex',
         alignItems:'center',
-        justifyContent:'center'
+        justifyContent:'center',
+        textAlign:'center'
+
       }
 
     return (
-        <div>
+        <div style={{boxShadow:'2px 0px 26px 4px rgba(0,0,0,0.41)'}}>
             <div style={header}>
-                <div>
-                <PlayCircleOutlined onClick={showModal} style={{fontSize:'100px', color:'white', opacity:'0.5'}}   />           
+                <div >
+                <h2 style={{fontSize:'70px', fontWeight:'500', marginTop:'40px', fontFamily:'sans-serif', letterSpacing:'2px'}}>Nosotros</h2>
+                <PlayCircleOutlined onClick={showModal} style={{fontSize:'100px', color:'white', opacity:'0.5', }}   />           
                 </div>
             </div>
         <Modal visible={isModalVisible} onCancel={handleCancel} footer={null} width={900}>
