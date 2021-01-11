@@ -1,9 +1,8 @@
-
 import React, {useState} from 'react'
 import { Form, Input, Button } from 'antd'
 import emailjs from 'emailjs-com';
 
-const Cont = () => {
+const Forms = () => {
     const [form] = Form.useForm()
     const [sent, setSent]= useState(false)
 
@@ -27,15 +26,12 @@ const Cont = () => {
             });
           }
 
-
-    
- 
     return (
         <div>
         <div style={{marginLeft:'50px'}}>
-            <h2 style={{ fontSize:'40px', fontWeight:'300',  margin:'0', color:'black'}}>Contáctanos</h2>
-            <h3 style={{ fontSize:'18px', fontWeight:'300', color:'black', margin:'0'}}>Teléfono: 55 5369 6000</h3>
-            <h3 style={{ fontSize:'18px', fontWeight:'300', color:'black', margin:'0'}}>Correo electrónico: contacto@servibev.com.mx</h3>
+            <h2 style={{ fontSize:'40px', fontWeight:'300',  margin:'0', color:'white'}}>Contáctanos</h2>
+            <h3 style={{ fontSize:'18px', fontWeight:'300', color:'white', margin:'0'}}>Teléfono: 55 5369 6000</h3>
+            <h3 style={{ fontSize:'18px', fontWeight:'300', color:'white', margin:'0'}}>Correo electrónico: contacto@servibev.com.mx</h3>
         </div>
         <div style={{width:'100%', display:'flex', justifyContent:'center', padding:'10px 50px 50px 50px'}}>
             <Form className="contact-form" layout="vertical" form={form} onFinish={sendEmail} style={{width:'400px', padding:'20px',backgroundColor:'#f1f2f5', borderRadius:'10px',  boxShadow:'1px 21px 42px 2px rgba(0,0,0,0.14)'}} >
@@ -60,4 +56,4 @@ const Cont = () => {
     </div>
     )
 }
-export default Cont
+export default Forms

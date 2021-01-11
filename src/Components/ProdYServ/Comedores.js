@@ -2,8 +2,8 @@ import React from 'react'
 
 const Comedores = () => {
     return (
-        <div>
-            <div style={{  position:'relative', padding:'10% 0 30% 0', width:'100%', height:'600px', display:'flex', flexDirection:'row', justifyContent:'center'}}>
+        <div >
+            <div style={{  position:'relative', padding:'10% 0 30% 0', width:'100%', height:'600px', display:'flex', flexDirection:'row', justifyContent:'center',  zIndex:'1'}}>
             <div>
                 <div style={{ width:'1000px', height:'400px',  top:'40%',  borderRadius:'10px', boxShadow:'1px 21px 42px 2px rgba(0,0,0,0.14)', backgroundColor:'white' }}>
                     <div style={{  position:'relative',padding:'5vh ', width:'50%', height:'300px', display:'flex', flexDirection:'column', textAlign:'center', top:'5%' }}>
