@@ -25,7 +25,7 @@ export const Servicios = () => {
                 <h2 style={{ textAlign:'center', fontSize:'40px', fontWeight:'300', marginTop:'40%',  borderBottom: '15px solid #FAB033'}}>Nuestros servicios</h2>
                 <p style={{ marginBottom:'50px'}}>Al consumir nuestros productos, usted recibirá de manera completamente <b>gratuita</b>:</p>
              
-                <Link className= "btnGen" style={{padding:'10px 60px'}}>Más información</Link>
+                <Link className= "btnGen" to="/nosotros" style={{padding:'10px 60px'}}>Más información</Link>
             </div>
 
             <div style={{ display:'flex', flexDirection:'row', flexWrap:'wrap', justifyContent:'center', width:'65%', height:'400px' }}>

@@ -4,8 +4,8 @@ export const BlogHeader = () => {
     const header={
         width:'100%',
         height:'50vh',
-        backgroundImage:'url(../../b3.jpg)',
-        backgroundPosition: '0% 0%',
+        backgroundImage:'url(https://images5.alphacoders.com/761/761629.jpg)',
+        backgroundPosition: '0% 94%',
         backgroundSize: 'cover',
         display:'flex',
         alignItems:'center',

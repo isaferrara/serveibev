@@ -18,8 +18,8 @@ import {
       const header={
         width:'100%',
         height:'50vh',
-        backgroundImage:'url(../../b3.jpg)',
-        backgroundPosition: '0% 0%',
+        backgroundImage:'url(https://blog.cure.fit/wp-content/uploads/2020/08/2020-08-22.jpg)',
+        backgroundPosition: '0% 80%',
         backgroundSize: 'cover',
         display:'flex',
         alignItems:'center',
