@@ -33,6 +33,7 @@ p {
   background-color: red;
 }
 .btnHeads {
+  margin-top: 5px;
   background:#EF325A;
   font-size: 18px;
   color: white;
@@ -41,8 +42,9 @@ p {
   box-shadow: 1px 21px 42px 2px rgba(0,0,0,0.14);
 }
 .btnHeads:hover {
-  background:#EF325A;
-  font-size: 18px;
+  margin-top: 5px;
+  background:#ef7732;
+  font-size: 20px;
   color: white;
   padding: 0% 60px 5% 60px;
   border-radius: 10px;

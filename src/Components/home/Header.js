@@ -70,7 +70,7 @@ const Header = () => {
             <div>
             
             <h1 style={{position:'absolute',top:'5%', left:'13%', fontSize:'100px', color:'black', fontFamily:'sans-serif'}}> Servibev </h1>
-            <h2 style={{position:'absolute',top:'19%', left:'17%', fontSize:'30px', color:'black'}}>Expertos en jarabes </h2>
+            <h2 style={{position:'absolute',top:'19%', left:'12%', fontSize:'30px', color:'black'}}>Expertos en jarabes para bebidas</h2>
             <PlayCircleOutlined onClick={showModal} style={{fontSize:'100px', color:'black', opacity:'0.4'}}   />           
             </div>
         <div style={{ display:'flex', flexDirection:'row', position:'absolute', marginTop:'800px'}}>

@@ -39,6 +39,8 @@ const Forms = () => {
     return (
         <div style={{ position:'absolute', top:'26%', left:'12%'}}>
             <Form className="contact-form" layout="vertical" form={form} onFinish={sendEmail} style={forma} >
+            <h4 style={{margin:0}}>Pide informes sin compromiso.</h4>
+
                 <Form.Item name='name' type='text' id='nombre' label="Nombre:" style={{padding:'10px 0px', margin:'0'}}  rules={[{ required: true, message: 'Su nombre es requerido' }]}>
                     <Input  bordered={true} style={{ background: 'rgba( 255, 255, 255, 0.10 )'}}/>
                 </Form.Item>
