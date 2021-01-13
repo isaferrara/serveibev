@@ -33,7 +33,7 @@ const LayoutServibev = ({ children }) => {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        zIndex: '2',
+        zIndex: '1',
         marginRight:'60px',
         transition: '2s',
       }
