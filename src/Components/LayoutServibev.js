@@ -22,7 +22,7 @@ const LayoutServibev = ({ children }) => {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        zIndex: '1',
+        zIndex: '4',
         marginRight:'60px'
       }
       const navyScroll = {
@@ -33,7 +33,7 @@ const LayoutServibev = ({ children }) => {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        zIndex: '1',
+        zIndex: '4',
         marginRight:'60px',
         transition: '2s',
       }

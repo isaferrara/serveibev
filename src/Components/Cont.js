@@ -51,7 +51,7 @@ const Cont = () => {
                 <Form.Item name='message' type='message' label="Mensaje:" rules={[{ required: true, message: '¿Qué te gustaría saber?' }]} >
                     <Input.TextArea  bordered={false} style={{backgroundColor:'white'}}/>
                 </Form.Item>
-                <Button type="primary" block htmlType="submit"> Enviar </Button>
+                <Button type="primary" block htmlType="submit" className='btnHeads'> Enviar </Button>       
                 {!sent? <></>:         
                 <h4 style={{color:'green', textAlign:'center'}}> El mensaje fue enviado con éxito</h4>          
                 }
