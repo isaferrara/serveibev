@@ -1,12 +1,20 @@
+
+html {
+  margin: 0px;
+  width: 600%;
+}
+
 body {
-  margin: 0;
   font-family: sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size:'17px'
+  font-size:'17px';
+  margin: 0px;
+  width: 500vh;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -54,16 +62,16 @@ p {
   background-color:#EF325A;
   font-size: 18px;
   color: white;
-  padding: 5px 10px;
-  border-radius: 10px;
+  padding: 15px 30px;
+  border-radius: 5px;
   box-shadow: 1px 21px 42px 2px rgba(0,0,0,0.14);
 }
 .btnGen:hover {
-  background-color:#fff;
+  background-color:#ef7732;
   font-size: 20px;
   color: white;
-  padding: 5px 10px;
-  border-radius: 10px;
+  padding: 15px 30px;
+  border-radius: 5px;
 
 }
 

@@ -1,0 +1,335 @@
+
+import React, { useState } from 'react'
+import { Modal } from 'antd'
+
+import {
+    PlayCircleOutlined,
+  } from '@ant-design/icons';
+import styled from 'styled-components'
+
+const ThreeCardsHeader= styled.div`
+        width:20em;
+        height: 17em;
+        display: flex;
+        padding: 20px 25px 20px 25px;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin:10px;
+        background: rgba( 255, 255, 255, 0.50 );
+        boxShadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 9.5px );
+        -webkit-backdrop-filter: blur( 9.5px );
+        border-radius: 10px;
+        z-index: 1;
+`
+const ContainerHeader= styled.div`
+        height:90vh;
+        background-image: url(../../f10.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:  cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+`
+const Servibev= styled.h1`
+        position: absolute;
+        top: 5%;
+        left: 13%;
+        fontize: 100px;
+        color: black;
+        fontFamily: sans-serif;
+`
+const Description= styled.h2`
+        position: absolute;
+        top: 19%;
+        left: 12%;
+        fontSize: 30px;
+        color: black;
+`
+const PlayBtn= styled(PlayCircleOutlined)`
+        position: absolute;
+        left: 0;
+        right: 0;
+        font-size: 100px;
+        color: black;
+        opacity: 0.4;
+        text-align: center;
+        padding: auto;
+  `
+const CardsContainer= styled.div`
+      display: flex;
+      flex-direction: row;
+      margin-top: 800px;
+`
+const CardTitle= styled.h2`
+      font-size: 2em;
+      font-weight: 400;
+` 
+const CardInfo= styled.p`
+      line-height: 17px; 
+` 
+
+const Header = () => {
+    const [isModalVisible, setIsModalVisible] = useState(false)
+
+    const showModal = () => {
+      setIsModalVisible(true)
+    }
+    const handleCancel = () => {
+        setIsModalVisible(false);
+      };
+
+    return (
+        <div>
+            <ContainerHeader>
+
+              <div>
+              <Servibev> Servibev </Servibev>
+              <Description>Expertos en jarabes para bebidas</Description>
+              <PlayBtn onClick={showModal} />           
+              </div>
+
+        <CardsContainer>
+
+            <ThreeCardsHeader>
+                <CardTitle>Servicio</CardTitle>
+                <CardInfo> Adipisicing reprehenderit non pariatur anim Lorem culpa in. Non fugiat amet proident qui ut ex incididunt et nostrud voluptate nisi in pariatur. Pariatur fugiat occaecat tempor.</CardInfo>
+            </ThreeCardsHeader> 
+
+            <ThreeCardsHeader>
+              <CardTitle>Calidad</CardTitle>
+              <CardInfo> Adipisicing reprehenderit non pariatur anim Lorem culpa in. Non fugiat amet proident qui ut ex incididunt et nostrud voluptate nisi in pariatur. Pariatur fugiat occaecat tempor.</CardInfo>           
+            </ThreeCardsHeader> 
+
+            <ThreeCardsHeader>
+                <CardTitle>Innovación</CardTitle>
+                <CardInfo> Adipisicing reprehenderit non pariatur anim Lorem culpa in. Non fugiat amet proident qui ut ex incididunt et nostrud voluptate nisi in pariatur. Pariatur fugiat occaecat tempor.</CardInfo>            
+            </ThreeCardsHeader> 
+          </CardsContainer>
+        </ContainerHeader>
+        <Modal visible={isModalVisible} onCancel={handleCancel} footer={null} width={900}>
+            <iframe width="100%" height="500px"
+                style={{marginTop:'20px'}}
+                src="https://www.youtube.com/embed/nb6A9_8hLRY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen="allowfullscreen"
+            ></iframe>
+        </Modal>
+        </div>
+    )
+}
+export default Header
+
+const ContainerServicios= styled.div`
+    margin: 1% auto 7% auto;
+
+    width: 90%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+`
+const TitleServicios= styled.h2`
+    text-align: left;
+    font-size: 40px;
+    font-weight: 300;
+    margin: auto auto 0px 10%;
+`
+
+const CardServicios= styled.div`
+        margin: 5px;
+        width: 30%;
+        height: 30%;
+        display: flex;
+        align-content: space-between;
+        flex-direction: column;
+        border-radius: 10px;
+        background-color: white;
+` 
+
+const SubtitleServicios= styled.h2`
+    color: #1f2933;
+    font-size: 22px;
+    margin: 10px 0;
+    text-align: center;
+
+`
+const ParServicios= styled.p`
+    font-size: 18px;
+    text-align: left;
+    margin: auto auto 5% 10%;
+
+`
+
+const ContainerCards= styled.div`
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+`
+const BtnServ= styled.button`
+    position: relative;
+    margin: 3% auto 2% auto;
+    width: 250px;
+    font-size: 16px;
+    background-color: transparent;
+    width: 250px;
+    font-size: 16px;
+    color: orange;
+    box-shadow: none;
+    border: 1px solid orange;
+    &:hover {
+    width: 250px;
+    font-size: 16px;
+  }
+
+`
+
+        <ContainerServicios>
+                <TitleServicios>Nuestros servicios</TitleServicios>
+                <ParServicios >Al consumir nuestros productos, usted recibirá de manera completamente <b>gratuita</b>:</ParServicios>
+            <ContainerCards>
+                <CardServicios >
+                    <AlertOutlined style={{fontSize:'100px', color:'#1f2933',marginTop:'20px'}}/>
+                    <SubtitleServicios> Instalación</SubtitleServicios>
+                </CardServicios>
+
+                <CardServicios  >
+                    <AlertOutlined style={{fontSize:'100px', color:'#1f2933',marginTop:'20px'}}/>
+                    <SubtitleServicios> Asistencia Técnica</SubtitleServicios>
+                </CardServicios>
+                
+                <CardServicios  >
+                    <AlertOutlined style={{fontSize:'100px', color:'#1f2933',marginTop:'20px'}}/>
+                    <SubtitleServicios> Mantenimiento </SubtitleServicios>
+                </CardServicios>
+            </ContainerCards>
+            <BtnServ className= "btnGen" to="/nosotros" style={{padding:'10px 60px'}}>Más información</BtnServ>
+
+    </ContainerServicios>
+´´´´´´´´
+
+    import React from 'react'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+
+const ContainPS= styled.div`
+        width: 100%;
+        background-color: #1f2933;
+        text-align:center;
+        padding: 50px;
+        box-shadow: 1px 21px 22px 2px rgba(0,0,0,0.24);
+`
+
+const TitleServ= styled.h2`
+        font-size: 40px;
+        font-weight: 300;
+        color: white;
+        line-height: 16px;
+`
+const PServ= styled.p`
+        color: white;
+`
+const ContainOuter= styled.div`
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        flex-wrap: wrap;
+        width: 800px;
+`
+const ContainCard= styled.div`
+        background: url(../../mantenimiento.jpeg);
+        background-size:  120%;
+        background-position:  10% 10%;
+`
+const CardTitle= styled.h2`
+        color: white;
+
+`
+const ContainInfo= styled.div`
+    margin-top: 230px;
+`
+const CardText= styled.h4`
+        color: white;
+        font-size: 17px;
+        font-family: serif;
+
+`
+
+const ContainSecCard= styled(ContainCard)`
+        background: url(../../asistenciatec.png);
+        background-size:  180%;
+        background-position:  90% 40%;
+`
+const ContainThirdCard= styled(ContainCard)`
+        background: url(../../reparacion.png);
+        background-size:  160%;
+        background-position:  10% 40%;
+`
+const ContainFourthCard= styled(ContainCard)`
+        background: url(https://www.cursoselearning.com/wp-content/uploads/2017/05/Atencion-al-cliente-600x408.jpg);
+        background-size:  200%;
+        background-position:  60% 40%;
+`
+const Servicios = () => {
+    return (
+        <ContainPS>
+            <TitleServ>Servicios</TitleServ>
+            <PServ>Los servicios que nuestros clientes reciben de manera gratuita son:</PServ>
+            
+            <ContainOuter>
+
+            <ContainCard className="blog-card spring-fever">           
+            <div className="title-content">
+                <CardTitle>Instalación</CardTitle>
+            </div>
+            <ContainInfo className="card-info">
+                <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim... </CardText>
+            </ContainInfo>
+            <div className="gradient-overlay"></div>
+            <div className="color-overlay"></div>
+            </ContainCard>
+
+            {/* segunda card */}
+            <ContainSecCard className="blog-card spring-fever">
+                <div className="title-content">
+                    <CardTitle>Asistencia técnica</CardTitle>
+                </div>
+                <ContainInfo className="card-info">
+                    <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim... </CardText>
+                </ContainInfo>
+                <div className="gradient-overlay"></div>
+                <div className="color-overlay"></div>
+            </ContainSecCard>
+            {/* tercera card */}
+            <ContainThirdCard className="blog-card spring-fever">
+                <div className="title-content">
+                    <CardTitle>Asistencia técnica</CardTitle>
+                </div>
+                <ContainInfo className="card-info">
+                    <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim... </CardText>
+                </ContainInfo>
+                <div className="gradient-overlay"></div>
+                <div className="color-overlay"></div>
+            </ContainThirdCard>
+                {/* 4 card */}
+                <ContainFourthCard className="blog-card spring-fever">
+                    <div className="title-content">
+                        <CardTitle>Asistencia técnica</CardTitle>
+                    </div>
+                    <ContainInfo className="card-info">
+                        <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim... </CardText>
+                    </ContainInfo>
+                    <div className="gradient-overlay"></div>
+                    <div className="color-overlay"></div>
+            </ContainFourthCard>        
+            </ContainOuter>
+        </ContainPS>
+    )
+}
+export default Servicios

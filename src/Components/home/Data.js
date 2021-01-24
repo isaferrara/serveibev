@@ -2,42 +2,64 @@ import React from 'react'
 import {
     DashboardFilled,
   } from '@ant-design/icons';
+import styled from 'styled-components'
+
+const DataServibev= styled.h3`
+    margin-top: 15px ;
+    color: black ;
+    font-size: 18px ;
+    font-weight: 200 ;
+    line-height: 17px;
+    
+`
+
+const DataContainer=styled.div`
+    margin: 15px auto 2px auto;
+    position:relative;
+    border-radius:5px;
+    z-index: 0;
+    padding: 1vh 0vh 1vh 0vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #f7f7f7;     
+`
+
+const DataContainerSingle=styled.div`
+    display: flex;
+    width: 12%;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    text-align: center;
+    position:relative;
+
+`
 
 export const Data = () => {
-    const data={
-        display:'flex',
-        width:'170px',
-        flexDirection:'column', 
-        justifyContent:'center', 
-        color:'white',
-        marginTop:'35px',
-        marginBottom:'35px',
-        textAlign:'center'
-    }
     return (
-        <div style={{margin:'auto', position:'relative', bottom: '40px', borderRadius:'5px', zIndex:'0', padding:'30vh 10vh 1vh 10vh', width:'100%',  display:'flex', flexDirection:'row', justifyContent:'space-around', backgroundColor:'#1f2933',  boxShadow:'1px 21px 42px 2px rgba(31, 41, 51, 0.34)'
-    }}>
-            <div style={data}>
-                <DashboardFilled style={{fontSize:'38px'}}/>
-               <h3  style={{marginTop:'15px',color:'white', fontSize:'18px', fontWeight:'200', lineHeight:'17px'}}> Más de 20 años de experiencia</h3>
-            </div>
-            <div  style={data}>
-                <DashboardFilled style={{fontSize:'38px'}}/>
-                <h3 style={{marginTop:'15px',color:'white', fontSize:'18px', fontWeight:'200',  lineHeight:'17px'}}> Más de 100 clientes en México</h3>
-            </div>
-            <div  style={data}>
-                <DashboardFilled style={{fontSize:'38px'}}/>
-                <h3 style={{marginTop:'15px',color:'white', fontSize:'18px', fontWeight:'200',  lineHeight:'17px'}}> Más de 100 clientes en México</h3>
-            </div>
-            <div  style={data}>
-                <DashboardFilled style={{fontSize:'38px'}}/>
-                <h3 style={{marginTop:'15px',color:'white', fontSize:'18px', fontWeight:'200',  lineHeight:'17px'}}> Más de 100 clientes en México</h3>
-            </div>
-            <div  style={data}>
-                <DashboardFilled style={{fontSize:'38px'}}/>
-                <h3 style={{marginTop:'15px',color:'white', fontSize:'18px', fontWeight:'200',  lineHeight:'17px'}}> Más de 100 clientes en México</h3>
-            </div>
-
+        <div style={{backgroundColor:'white'}}>
+        <DataContainer>
+            <DataContainerSingle>
+                <DashboardFilled style={{fontSize:'38px', color: 'gray'}}/>
+                <DataServibev> Más de 100 clientes en México</DataServibev>
+            </DataContainerSingle>
+            <DataContainerSingle>
+                <DashboardFilled style={{fontSize:'38px', color: 'gray'}}/>
+                <DataServibev> Más de 100 clientes en México</DataServibev>
+            </DataContainerSingle>
+            <DataContainerSingle>
+                <DashboardFilled style={{fontSize:'38px', color: 'gray'}}/>
+                <DataServibev> Más de 100 clientes en México</DataServibev>
+            </DataContainerSingle>
+            <DataContainerSingle>
+                <DashboardFilled style={{fontSize:'38px', color: 'gray'}}/>
+                <DataServibev> Más de 100 clientes en México</DataServibev>
+            </DataContainerSingle>
+        </DataContainer>
         </div>
     )
 }

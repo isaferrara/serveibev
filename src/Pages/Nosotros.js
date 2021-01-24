@@ -2,8 +2,8 @@ import React from 'react'
 import Header from '../Components/Nosotros/Header.js'
 import LayoutServibev from '../Components/LayoutServibev.js'
 import Valores from '../Components/Nosotros/Valores.js'
-import Historia from '../Components/Nosotros/Historia.js'
-import Data from '../Components/Nosotros/Data.js'
+import Ubicacion from '../Components/Nosotros/Ubicacion.js'
+import Cultura from '../Components/Nosotros/Cultura.js'
 import Equipo from '../Components/Nosotros/Equipo.js'
 import Instalaciones from '../Components/Nosotros/Instalaciones.js'
 import Footer from '../Components/Footer.js'
@@ -16,8 +16,8 @@ import Map from '../Components/Map.js'
             <div style={{backgroundColor:'white'}}>
             <Header/>
             <Valores/>
-            <Historia/>
-            <Data/>         
+            <Cultura/>
+            <Ubicacion/>
             <Equipo/>
             <Instalaciones/>
             <div style={{margin:'30px',paddingTop:'20px',  borderRadius:'10px', backgroundColor:'#1f2933', display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center'}}>

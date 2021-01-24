@@ -1,7 +1,13 @@
 import React, {useState} from 'react'
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Popover } from 'antd';
 import { Link } from 'react-router-dom'
-const { Header, Content, Footer } = Layout;
+import { Row, Col } from 'antd';
+import ResponsiveAntMenu from 'responsive-ant-menu'
+
+require("lodash.throttle/package.json")
+
+const { Content } = Layout;
+
 
 const LayoutServibev = ({ children }) => {
 
@@ -23,7 +29,6 @@ const LayoutServibev = ({ children }) => {
         flexDirection: 'row',
         justifyContent: 'space-between',
         zIndex: '4',
-        marginRight:'60px'
       }
       const navyScroll = {
         width: '100%',
@@ -34,7 +39,6 @@ const LayoutServibev = ({ children }) => {
         flexDirection: 'row',
         justifyContent: 'space-between',
         zIndex: '4',
-        marginRight:'60px',
         transition: '2s',
       }
 
@@ -51,42 +55,55 @@ const LayoutServibev = ({ children }) => {
     window.addEventListener('scroll', changeBack)
 
     return (
-    <Layout >
-        <div style={!navbar? navy: navyScroll } >
-                <div>
-                    <img alt="logo-servibev" src='../../servibev.png' style={{width:'70px', height:'60px', marginLeft:'20px'}}/>
-                </div>
-            <Menu  mode="horizontal"  style={{background:'transparent', border:'none'}}>
+    <Layout style={{width:'100%', backgroundColor:'white'}}>
+        <Row style={!navbar? navy: navyScroll } justify='space-around'>
+                <Col md={4} lg={2} xl={2}  >
+                    <img alt="logo-servibev" src='../../servibev.png' style={{width:'70px', height:'60px', position: 'relative', left:'20px'}}/>
+                </Col>
+            <Col  xs={6} sm={10}  md={20} lg={20} xl={22} >
+            <ResponsiveAntMenu
+                mobileMenuContent={isMenuShown => isMenuShown ? <button>Close</button> : <button>Open</button>}
+                menuClassName={'responsive-ant-menu'}
+                mobileBreakPoint={800}
+                throttleViewportChange={100}
+                mode={'vertical'}
+            >
+                {(onLinkClick) =>
+  
+            <Menu  mode="horizontal"  style={{background:'transparent', border:'none', width:'100%' , display:'flex', justifyContent:'flex-end'}}>
                 <Menu.Item key="1" style={{listStyleType: 'none'}} >
-                    <Link to="/" style={nav}>
+                    <Link to="/" onClick={onLinkClick} style={nav}>
                         Home
                     </Link>
                 </Menu.Item>      
                 <Menu.Item key="2"  style={{listStyleType: 'none'}}>
-                    <Link to="/nosotros" style={nav}>
+                    <Link to="/nosotros"  onClick={onLinkClick} style={nav}>
                         Nosotros
                     </Link>
                 </Menu.Item>
                 <Menu.Item key="3"  style={{listStyleType: 'none'}}>
-                    <Link to="/productos" style={nav}>
+                    <Link to="/productos" onClick={onLinkClick}  style={nav}>
                         Productos y servicios
                     </Link>
                 </Menu.Item>
                 <Menu.Item key="4"  style={{listStyleType: 'none'}}>
-                <Link to="/blog" style={nav}>
+                <Link to="/blog" onClick={onLinkClick} style={nav}>
                         Blog
                     </Link>
                 </Menu.Item>
                 <Menu.Item key="5"  style={{listStyleType: 'none'}}>
-                    <Link to="/contacto" style={nav}>
+                    <Link to="/contacto" onClick={onLinkClick} style={nav}>
                         Contacto
                     </Link>
                 </Menu.Item>
             </Menu>
-        </div>
+                 }
+            </ResponsiveAntMenu>
+            </Col>
+        </Row>
 
-      <Content>
-        <div >{children}</div>
+      <Content style={{width:'100%'}}>
+        {children}
       </Content>
       
     </Layout>

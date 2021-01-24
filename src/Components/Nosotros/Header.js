@@ -1,9 +1,15 @@
 import React, { useState } from 'react'
 import { Modal } from 'antd'
+import {PlayCircleOutlined,} from '@ant-design/icons';
+import styled from 'styled-components'
+import {Header as HeaderImg, TitleHeader} from '../BlogHeader'
 
-import {
-    PlayCircleOutlined,
-  } from '@ant-design/icons';
+
+const HeaderNos= styled(HeaderImg)`
+    background-image: url(https://blog.cure.fit/wp-content/uploads/2020/08/2020-08-22.jpg);
+    backgroundPosition: 0% 80%;
+
+`
 
  const Header = () => {
     const [isModalVisible, setIsModalVisible] = useState(false)
@@ -15,27 +21,14 @@ import {
         setIsModalVisible(false);
       };
 
-      const header={
-        width:'100%',
-        height:'50vh',
-        backgroundImage:'url(https://blog.cure.fit/wp-content/uploads/2020/08/2020-08-22.jpg)',
-        backgroundPosition: '0% 80%',
-        backgroundSize: 'cover',
-        display:'flex',
-        alignItems:'center',
-        justifyContent:'center',
-        textAlign:'center'
-
-      }
-
     return (
-        <div style={{boxShadow:'2px 0px 26px 4px rgba(0,0,0,0.41)'}}>
-            <div style={header}>
+        <div style={{boxShadow:'2px 0px 26px 4px rgba(0,0,0,0.11)'}}>
+            <HeaderNos>
                 <div >
-                <h2 style={{fontSize:'70px', fontWeight:'500', marginTop:'40px', fontFamily:'sans-serif', letterSpacing:'2px', textShadow: '5px 5px 10px rgba(0,0,0,0.51)'}}>Nosotros</h2>
+                <TitleHeader>Nosotros</TitleHeader>
                 <PlayCircleOutlined onClick={showModal} style={{fontSize:'100px', color:'white', opacity:'0.5', }}   />           
                 </div>
-            </div>
+            </HeaderNos>
         <Modal visible={isModalVisible} onCancel={handleCancel} footer={null} width={900}>
             <iframe width="100%" height="500px"
                 style={{marginTop:'20px'}}

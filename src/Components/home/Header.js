@@ -1,82 +1,57 @@
 import React, { useState } from 'react'
 import { Modal } from 'antd'
 import { Link } from 'react-router-dom'
-
 import {
     PlayCircleOutlined,
   } from '@ant-design/icons';
+import styled from 'styled-components'
 
+
+const ContainerHeader= styled.div`
+        height:80vh;
+        background-image: url(../../f10.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:  cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+ 
+`
+const Servibev= styled.h1`
+        position: absolute;
+        top: 10%;
+        left: 13%;
+        font-size: 100px;
+        color: black;
+        fontFamily: sans-serif;
+`
+const Description= styled.h2`
+        position: absolute;
+        top: 25%;
+        left: 12%;
+        font-size: 30px;
+        color: black;
+`
+const BtnCalidad= styled(Link)`
+    position: absolute;
+    top:43%;
+    left: 17%;
+`
+const ImgPost= styled.img`
+    position: absolute;
+    width: 400px;
+    left: 10%;
+    top: 5%;
+`
 const Header = () => {
-    const [isModalVisible, setIsModalVisible] = useState(false)
-
-    const showModal = () => {
-      setIsModalVisible(true)
-    }
-    const handleCancel = () => {
-        setIsModalVisible(false);
-      };
-
-      const header={
-        width:'100%',
-        height:'90vh',
-        backgroundImage:'url(../../f10.jpg)',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        display:'flex',
-        alignItems:'center',
-        justifyContent:'center',
-      }
-
-
-      const threeCardsHeader={
-        width:'20em',
-        height:'17em',
-        display:'flex',
-        padding:'20px 25px 20px 25px',
-        alignItems:'center',
-        justifyContent:'space-between',
-        flexDirection:'column',
-        margin:'10px',
-        background: 'rgba( 255, 255, 255, 0.50 )',
-        boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )',
-        backdropFilter: 'blur( 9.5px )',
-        WebkitBackdropFilter: 'blur( 9.5px )',
-        borderRadius: '10px',
-        zIndex:'1'
-      }
-
 
     return (
         <div>
-            <div style={header}>
-              <div>
-              
-              <h1 style={{position:'absolute',top:'5%', left:'13%', fontSize:'100px', color:'black', fontFamily:'sans-serif'}}> Servibev </h1>
-              <h2 style={{position:'absolute',top:'19%', left:'12%', fontSize:'30px', color:'black'}}>Expertos en jarabes para bebidas</h2>
-              <PlayCircleOutlined onClick={showModal} style={{ position:'absolute', left:'0', right:'0',fontSize:'100px', color:'black', opacity:'0.4', textAlign:'center', padding:'auto'}}   />           
-              </div>
-        <div style={{ display:'flex', flexDirection:'row', marginTop:'800px'}}>
-            <div style={threeCardsHeader}>
-                <h2 style={{fontSize:'2em',fontWeight:'400'}}>Servicio</h2>
-                <p style={{lineHeight:'17px'}}>Adipisicing reprehenderit non pariatur anim Lorem culpa in. Non fugiat amet proident qui ut ex incididunt et nostrud voluptate nisi in pariatur. Pariatur fugiat occaecat tempor.</p>
-            </div> 
-            <div style={threeCardsHeader}>
-              <h2 style={{fontSize:'2em',  fontWeight:'400'}}>Calidad</h2>
-              <p style={{lineHeight:'17px'}}>Adipisicing reprehenderit non pariatur anim Lorem culpa in. Non fugiat amet proident qui ut ex incididunt et nostrud voluptate nisi in pariatur. Pariatur fugiat occaecat tempor.</p>           
-            </div> 
-            <div style={threeCardsHeader}>
-                <h2 style={{fontSize:'2em', fontWeight:'400'}}>Innovación</h2>
-                <p style={{lineHeight:'17px'}}>Adipisicing reprehenderit non pariatur anim Lorem culpa in. Non fugiat amet proident qui ut ex incididunt et nostrud voluptate nisi in pariatur. Pariatur fugiat occaecat tempor.</p>            </div> 
-            </div>
-        </div>
-        <Modal visible={isModalVisible} onCancel={handleCancel} footer={null} width={900}>
-            <iframe width="100%" height="500px"
-                style={{marginTop:'20px'}}
-                src="https://www.youtube.com/embed/nb6A9_8hLRY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen="allowfullscreen"
-            ></iframe>
-        </Modal>
+            <ContainerHeader>
+              <ImgPost src='../../servibev.png'/>
+              <BtnCalidad to='/nosotros' className='btnGen' >Más información</BtnCalidad>
+          </ContainerHeader>
         </div>
     )
 }

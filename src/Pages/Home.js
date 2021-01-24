@@ -10,22 +10,29 @@ import Servicios from '../Components/home/Servicios.js'
 import Testimonials from '../Components/home/Testimonials.js'
 import Footer from '../Components/Footer.js'
 import WhatsAppWidget from 'react-whatsapp-widget'
+import Servibev from '../Components/home/Servibev.js'
+import Blog from '../Components/home/Blog.js'
+
 import 'react-whatsapp-widget/dist/index.css'
+
+
+
 
 const Home = () => {
     return (
         <LayoutServibev>
-            <Forms/>
             <Header/>
             <Data/>
+            <Servibev/>
             <PostMix/>
             <Servicios/>
             <Calidad/>
             <Testimonials/>
             <Clients/>
+            <Blog/>
             <Footer/>
             <WhatsAppWidget phoneNumber='525539393631' message='¿Cómo te podemos ayudar?' textReplyTime='Responderemos lo más pronto posible' companyName='Atención a cliente' sendButton='Enviar'/>
-        </LayoutServibev>
+         </LayoutServibev> 
     )
 }
 export default Home
